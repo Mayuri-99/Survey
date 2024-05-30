@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SignUP</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <style>
+        .card1{
+            width: 800px; /* Adjust width as needed */
+            height: 80px; /* Adjust height as needed */
+            overflow: auto; /* Enables both horizontal and vertical scrolling */
+            border: 1px solid #ccc; /* Optional: border to distinguish the div */
+            padding: 10px; /* Optional: padding inside the div */
+        }
+</style>
+</head>
+</html>
+<body style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjo-lKn7HwbaTXRolycd8M9ZEZ09sn4gaKBA&amp;s); background-repeat: no-repeat; background-size: 1600px; ">
+    <div class="container-fluid">
+        <div class="card" style="margin-left:130px; margin-right: 130px; height: 650px;">
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <h2 style="text-align: center; color: brown;">Scimitar Research</h2>
+              </div>
+            </div>
+            <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <h2 style="text-align: center; color: rgb(135, 96, 220);"><b>Survey<b></h2>
+            </div>
+            </div>
+            <div  class="container p-3 bg-">
+                <div class="card1" style="margin-left:70px; margin-right: 70px; height: 500px;border: 2px outset;padding: 20px; box-shadow: 10px 12px 20px rgb(219, 71, 217);"> 
+                    <form action ="" method="post"> 
+                        {%csrf_token%}
+                        <label for="que1" class="mr-sm-2" >Que 1:</label>
+                        <input type="text" class="form-control mr-sm-2 mb-2" id="q1" placeholder="Enter question" name="q1">
+                        <input type="text" class="form-control mr-sm-2 mb-2" id="a1" placeholder="Answer" name="a1">
+                        <label for="que1" class="mr-sm-2" >Que 2:</label>
+                        <input type="text" class="form-control mr-sm-2 mb-2" id="q2" placeholder="Enter question" name="a1">
+                        <input type="text" class="form-control mr-sm-2 mb-2" id="a2" placeholder="Answer" name="a2">
+                        <label for="que1" class="mr-sm-2" >Que 3:</label>
+                        <input type="text" class="form-control mr-sm-2 mb-2" id="q3" placeholder="Enter question(Multiple choice)" name="q3">
+                        <input type="text" size="5" maxlength="4" id="a31" placeholder="uder 18" name="a31">
+                        <input type="radio"id="r1" name="r1" value="age">
+                        <input type="text" size="5" maxlength="4" id="a32" placeholder="18-24" name="a32">
+                        <input type="radio"id="r2" name="r2" value="age">
+                        <input type="text" size="5" maxlength="4" id="a33" placeholder="25-34" name="a33">
+                        <input type="radio"id="r3" name="r3" value="age">
+                        <input type="text" size="5" maxlength="4" id="a34" placeholder="35-44" name="a34">
+                        <input type="radio"id="r4" name="r4" value="age">
+                        <input type="text" size="5" maxlength="4" id="a35" placeholder="45-54" name="a35">
+                        <input type="radio"id="r6" name="r5" value="age">
+                        <input type="text" size="5" maxlength="4" id="a36" placeholder="55-64" name="a36">
+                        <input type="radio"id ="r6" name="r6" value="age">
+                        <input type="text" size="5"  maxlength="4" id="a37" placeholder="65 or older" name="a37">
+                        <input type="radio"id ="r7"class="mb-2" name="r7" value="age">
+                        <br>
+                        <label for="que1" class="mr-sm-2" >Que 4:</label>
+                         <input type="text" class="form-control mr-sm-2 mb-2" id="q4" placeholder="Enter question(Multiple choice)" name="q4">
+                        <input type="text" size="10"  id="a41" placeholder="male" name="a41">
+                        <input type="radio"id="r41" name="r41" value="age">
+                        <input type="text" size="10"  id="a42" placeholder="female" name="a42">
+                        <input type="radio"id="r42" name="r42" value="age">
+                        <input type="text" size="10"  id="a43" placeholder="Non-binary/Third gender" name="a43">
+                        <input type="radio"id="r43" name="r43" value="age">
+                        <input type="text" size="10"  id="a44" placeholder="Prefer not to say" name="a44">
+                        <input type="radio"id="r44" name="r44" value="age">
+                        <br>
+                        <label for="que6" class="mr-sm-2" >Que 5:</label>
+                        <input type="text" class="form-control mr-sm-2 mb-2" id="q5" placeholder="Enter question" name="q5">
+                        <textarea id="a5" name="a5" rows="4" cols="100"></textarea>
+                        <br>
+                        <label for="que6" class="mr-sm-2" >Que 6:</label>
+                        <input type="text" class="form-control mr-sm-2 mb-2" id="q6" placeholder="Enter question(Multiple choice)" name="q6">
+                        <input type="text" size="8"  id="a61" placeholder="Daily" name="a61">
+                        <input type="radio"id="r61" name="r61" value="Daily">
+                        <input type="text" size="8"  id="a62" placeholder="Weekly" name="a62">
+                        <input type="radio"id="r62" name="r62" value="Weekly">
+                        <input type="text" size="8"  id="a63" placeholder="Monthly" name="a63">
+                        <input type="radio"id="r63" name="r63" value="Monthly">
+                        <input type="text" size="8"  id="a64" placeholder="Occasionally" name="a64">
+                        <input type="radio"id="r64" name="r64" value="Occasionally">
+                        <input type="text" size="8"  id="a65" placeholder="Rarely" name="a65">
+                        <input type="radio"id="r65" name="r65" value="Rarely">
+                        <input type="text" size="8"  id="a66" placeholder="Never" name="a66">
+                        <input type="radio"id="r66" name="r66" value="Never">
+                        <br>
+                        <label for="que6" class="mr-sm-2" >Que 7:</label>
+                        <input type="text" class="form-control mr-sm-2 mb-2" id="q7" placeholder="Enter question(Multiple choice)" name="q7">
+                        <input type="text" size="8"  id="a71" placeholder="Supermarket" name="a71">
+                        <input type="radio"id="r71" name="r71" value="Supermarket">
+                        <input type="text" size="8"  id="a72" placeholder="Convenience store" name="a72">
+                        <input type="radio"id="r72" name="r72" value="Convenience store">
+                        <input type="text" size="8"  id="a73" placeholder="Online" name="a73">
+                        <input type="radio"id="r73" name="r73" value="Online">
+                        <input type="text" size="8"  id="a74" placeholder="Vending machine" name="a74">
+                        <input type="radio"id="r74" name="r74" value="Vending machine">
+                        <input type="text" size="8"  id="a75" placeholder="Other(plase Specify)" name="a75">
+                        <input type="radio"id="r75" name="r75" value="Other(plase Specify)">
+                        <br>
+                        <label for="que8" class="mr-sm-2" >Que 8:</label>
+                        <input type="text" class="form-control mr-sm-2 mb-2" id="q8" placeholder="Enter question(Multiple choice)" name="q8">
+                        <input type="text" size="12"  id="a81" placeholder="Classic KitKat" name="a81">
+                        <input type="radio"id="r81" name="r81" value="Classic KitKat">
+                        <input type="text" size="12"  id="a82" placeholder="KitKat Chunky" name="a82">
+                        <input type="radio"id="r82" name="r82" value="KitKat Chunky">
+                        <input type="text" size="12"  id="a83" placeholder="KitKat White" name="a83">
+                        <input type="radio"id="r83" name="r83" value="KitKat White">
+                        <input type="text" size="12"  id="a84" placeholder="KitKat Dark" name="a84">
+                        <input type="radio"id="r84" name="r84" value="KitKat Dark">
+                        <br><br>
+                        <input type="text" size="12"  id="a85" placeholder="KitKat Mint" name="a85">
+                        <input type="radio"id="r85" name="r85" value="KitKat Mint">
+                        <input type="text" size="12"  id="a86" placeholder="KitKat Seasonal Flavors(eg.Pumpkin, Strawberry)" name="a86">
+                        <input type="radio"id="r86" name="r86" value="KitKat Seasonal Flavors">
+                        <input type="text" size="12"  id="a87" placeholder="Others(Please Specify)" name="a87">
+                        <input type="radio"id="r87" name="r87" value="Others(Please Specify)">
+                        <br>
+                        <label for="que9" class="mr-sm-2" >Que 9:</label>
+                        <input type="text" class="form-control mr-sm-2 mb-2" id="q9" placeholder="Enter question(Multiple choice)" name="q9">
+                        <input type="text" size="10"  id="a91" placeholder="" name="a91">
+                        <input type="radio"id="r91" name="r91" value="Classic KitKat">
+                        <input type="text" size="10"  id="a92" placeholder="" name="a92">
+                        <input type="radio"id="r92" name="r92" value="KitKat Chunky">
+                        <input type="text" size="10"  id="a93" placeholder="" name="a93">
+                        <input type="radio"id="r93" name="r93" value="KitKat White">
+                        <input type="text" size="10"  id="a94" placeholder="" name="a94">
+                        <input type="radio"id="r94" name="r94" value="KitKat Dark">
+                        <input type="text" size="10"  id="a95" placeholder="" name="a95">
+                        <input type="radio"id="r95" name="r95" value="KitKat Dark">
+                        <br>
+                        <label for="que10" class="mr-sm-2" >Que 10:</label>
+                        <input type="text" class="form-control mr-sm-2 mb-2" id="q10" placeholder="How satisfied are you with the packaging of KitKat?" name="q10">
+                        <input type="text" size="10"  id="a101" placeholder="Very satisfied" name="a101">
+                        <input type="radio"id="r101" name="r101" value="Very satisfied">
+                        <input type="text" size="10"  id="a102" placeholder="Satisfied" name="a102">
+                        <input type="radio"id="r102" name="r102" value="Satisfied">
+                        <input type="text" size="10"  id="a103" placeholder="Neutral" name="a103">
+                        <input type="radio"id="r103" name="r103" value="Neutral">
+                        <input type="text" size="10"  id="a104" placeholder="Dissatisfied" name="a104">
+                        <input type="radio"id="r104" name="r104" value="Dissatisfied">
+                        <input type="text" size="10"  id="a105" placeholder="Very Dissatisfied" name="a105">
+                        <input type="radio"id="r105" name="r105" value="Very Dissatisfied">
+                        <br>
+                        <label for="que11" class="mr-sm-2" >Que 11:</label>
+                        <input type="text" class="form-control mr-sm-2 mb-2" id="q11" placeholder="Enter question(Multiple choice)" name="q11">
+                        <input type="text" size="10"  id="a111" placeholder="Very likely" name="a111">
+                        <input type="radio"id="r111" name="r111" value="Very likely">
+                        <input type="text" size="10"  id="a112" placeholder="Likely" name="a112">
+                        <input type="radio"id="r112" name="r112" value="Likely">
+                        <input type="text" size="10"  id="a113" placeholder="Neutral" name="a113">
+                        <input type="radio"id="r113" name="r113" value="Neutral">
+                        <input type="text" size="10"  id="a114" placeholder="Unlikely" name="a114">
+                        <input type="radio"id="r114" name="r114" value="Unlikely">
+                        <input type="text" size="10"  id="a115" placeholder="Very unlikely" name="a115">
+                        <input type="radio"id="r115" name="r115" value="Very unlikely">
+                        <br>
+                        <label for="que11" class="mr-sm-2" >Que 12:</label>
+                        <input type="text" class="form-control mr-sm-2 mb-2" id="q12" placeholder="Enter question(Multiple choice)" name="q12">
+                        <input type="text" size="10"  id="a121" placeholder="Taste" name="a121">
+                        <input type="checkbox" id="c1" name="c1">
+                        <input type="text" size="10"  id="a122" placeholder="Price" name="a122">
+                        <input type="checkbox" id="c2" name="c2">
+                        <input type="text" size="10"  id="a123" placeholder="Brand reputation" name="a123">
+                        <input type="checkbox" id="c3" name="c3">
+                        <input type="text" size="10"  id="a124" placeholder="Packaging" name="a124">
+                        <input type="checkbox" id="c4" name="c4">
+                        <br><br>
+                        <input type="text" size="10"  id="a125" placeholder="Ingredients" name="a125">
+                        <input type="checkbox" id="c5" name="c5">
+                        <input type="text" size="10"  id="a126" placeholder="Availability" name="a126">
+                        <input type="checkbox" id="c6" name="c6">
+                        <input type="text" size="10"  id="a127" placeholder="Other(Please Specify)" name="a127">
+                        <input type="checkbox" id="c7" name="c7">
+                        <br>
+                        <label for="que10" class="mr-sm-2" >Que 13:</label>
+                        <input type="text" class="form-control mr-sm-2 mb-2" id="q13" placeholder="Enter question(Multiple choice)" name="q13">
+                        <input type="text" size="10"  id="a131" placeholder="Yes" name="a131">
+                        <input type="radio"id="r131" name="r131" value="Yes">
+                        <input type="text" size="10"  id="a132" placeholder="No" name="a132">
+                        <input type="radio"id="r132" name="r132" value="No">
+                        <input type="text" size="10"  id="a133" placeholder="No preference" name="a133">
+                        <input type="radio"id="r133" name="r133" value="No preference">
+                        <br>
+                        <label for="que14" class="mr-sm-2" >Que 14:</label>
+                        <input type="text" class="form-control mr-sm-2 mb-2" id="q14" placeholder="Enter question" name="q14">
+                        <input type="text" class="form-control mr-sm-2 mb-2" id="a14" placeholder="Answer" name="a14">
+                       
+                        <label for="que15" class="mr-sm-2" >Que 15:</label>
+                        <input type="text" class="form-control mr-sm-2 mb-2" id="q15" placeholder="Enter question(Multiple choice)" name="q15">
+                        <input type="text" size="11"  id="a151" placeholder="Television" name="a151">
+                        <input type="radio"id="r151" name="r151" value="Television">
+                        <input type="text" size="11"  id="a152" placeholder="Online advertisement" name="a152">
+                        <input type="radio"id="r152" name="r152" value="Online advertisement">
+                        <input type="text" size="11"  id="a153" placeholder="Social media" name="a153">
+                        <input type="radio"id="r153" name="r153" value="Social media">
+                        <input type="text" size="11"  id="a154" placeholder="Word of mouth" name="a154">
+                        <input type="radio"id="r154" name="r154" value="Word of mouth">
+                        <br><br>
+                        <input type="text" size="11"  id="a155" placeholder="In store display" name="a155">
+                        <input type="radio"id="r155" name="r155" value="In store display">
+                        <input type="text" size="11"  id="a156" placeholder="Other(Please Specify)" name="a156">
+                        <input type="radio"id="r156" name="r156" value="Other(Please Specify)">
+                        <br>
+                        <label for="que16" class="mr-sm-2" >Que 16:</label>
+                        <input type="text" class="form-control mr-sm-2 mb-2" id="q16" placeholder="Enter question(Multiple choice)" name="q16">
+                        <input type="text" size="10"  id="a161" placeholder="Facebook" name="a161">
+                        <input type="checkbox" id="c161" name="c161">
+                        <input type="text" size="10"  id="a162" placeholder="Instagram" name="a162">
+                        <input type="checkbox" id="c162" name="c162">
+                        <input type="text" size="10"  id="a163" placeholder="Twitter" name="a163">
+                        <input type="checkbox" id="c163" name="c163">
+                        <input type="text" size="10"  id="a164" placeholder="TikTok" name="a164">
+                        <input type="checkbox" id="c164" name="c164">
+                        <input type="text" size="10"  id="a165" placeholder="None" name="a165">
+                        <input type="checkbox" id="c165" name="c165">
+                        <input type="text" size="10"  id="a166" placeholder="Other(Please specify)" name="a166">
+                        <input type="checkbox" id="c166" name="c166">
+                        <br>
+                        <label for="que1" class="mr-sm-2" >Que 17:</label>
+                        <input type="text" class="form-control mr-sm-2 mb-2" id="q17" placeholder="Enter question" name="q17">
+                        <input type="text" class="form-control mr-sm-2 mb-2" id="a17" placeholder="Answer" name="a17">
+                        
+                        <button type="button" class="btn btn-primary ">Submit</button>
+
+
+
+
+
+
+                        
+
+
+
+
+
+                        
+
+
+                        
+
+                    </form>
+
+
+                </div>
+                </div>
+       </div>
+    
+    </div>
+</body>

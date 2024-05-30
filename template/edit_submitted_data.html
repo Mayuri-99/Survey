@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Submitted Questions and Answers</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Questions</h1>
+        <form method="post">
+            {% csrf_token %}
+            
+            {{ question_formset.management_form }}
+            {% for form in question_formset %}
+                <div class="form-group">
+                    {{ form.as_p }}
+                </div>
+            {% endfor %}
+            
+            {{ answer_formset.management_form }}
+            {% for form in answer_formset %}
+                <div class="form-group">
+                    {{ form.as_p }}
+                </div>
+            {% endfor %}
+            <button type="submit" class="btn btn-primary">Submit Survey</button>
+        </form>
+    </div>
+</body>
+</html>

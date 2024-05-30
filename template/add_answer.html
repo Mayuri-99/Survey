@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Add Answers</title>
+</head>
+<body>
+    <h1>Add Answers to: {{ question.question_text }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="answer_text">Answer:</label>
+        <input type="text" id="answer_text" name="answer_text">
+        <button type="submit">Add Answer</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Homepage</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <style>
+        #toggle {
+            position: fixed;
+            top: 60px;
+            left: 10px;
+            width: 80px;
+            height: 40px;
+            cursor: pointer;
+
+            justify-content: center;
+            align-items: center;
+            background: rgb(160, 238, 238);
+        }
+        #sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            letter-spacing: 0.8px;
+        }
+        #sidebar ul li:hover {
+            background-color: rgb(154, 184, 239);
+        }
+        #sidebar {
+            position: fixed;
+            top: 110px;
+            right: 900px;
+            left: -250px;
+            width: 180px;
+            height: 75vh;
+            background: rgb(232, 201, 135);
+            transition: 0.5s;
+            border-style: inset;
+            border-color: magenta;
+            border-radius: 8px;
+            border-width: 4px;
+
+        }
+
+        #sidebar.active {
+            left: 0px;
+        }
+        
+    </style>
+        
+    </head>
+    
+    <body >
+        <div class="container-fluid">
+         <div class="row">
+         <nav class="navbar navbar-expand navbar-light bg-light">
+            
+                <a class="navbar-link" href="">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active"  href="{% url 'survey' %}">Survey</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">About_Us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">Contact_Us</a>
+                      </li>
+                      
+                      <li class="nav-item">
+                        <a class="nav-link active " href="{% url 'signout' %}">Logout</a>
+                      </li>
+                      
+                      
+                    </ul>
+                    
+                  </div>
+                </div>
+              
+            </div>
+            
+            </nav>
+        </div>
+        <div class="container-fluid">
+        <div class=" row">
+            <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                <div class="row">
+                    <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+                        <div id="toggle">
+                            &#9776
+                        </div>
+                        <div id="sidebar">
+                            <ul>
+                                <li><a href="#">Sign In/Sign Up</a></li>
+                                <li><a href="#">Register Shop</a></li>
+                                
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">About Us</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+                </div>
+            </div>
+    </div> 
+    <script>
+        const toggle = document.getElementById("toggle");
+        const sidebar = document.getElementById("sidebar");
+
+        document.onclick = function (e) {
+            if (e.target.id !== "sidebar" && e.target.id !== "toggle") {
+                toggle.classList.remove("active");
+                sidebar.classList.remove("active");
+            }
+        }
+
+        toggle.onclick = function () {
+            toggle.classList.toggle("active");
+            sidebar.classList.toggle("active");
+        }
+    </script>
+    </body>
+</html>

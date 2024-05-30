@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SignUP</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+   <style>
+       .btn:hover{
+           background-color: rgb(233, 81, 112);
+           display: inline-block;
+       }
+   </style>
+</head>
+
+<body style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjo-lKn7HwbaTXRolycd8M9ZEZ09sn4gaKBA&amp;s); background-repeat: no-repeat; background-size: 1600px;">
+    <div class="container-fluid">
+        
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="row  ">
+
+                    <div class="col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2" ></div>
+                    <div class="col-12 col-sm-8 col-md-8 col-lg-8 col-xl-8 ">
+
+                        <div class="card" style="margin-left: 80px; margin-right: 80px; height: 500px">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                    <h1 style="text-align: center; color: brown;">Scimitar Research</h1>
+                                </div>
+                            </div>
+                            <div class="row mt-1 mb-1">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                                    <center>
+                                        <img src="data:image/jpeg;base64,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" width="91" height="91" alt="Google logo" >
+                                        
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="row mt-1 mb-1">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+                                    <h2 style="text-align: center; color: rgb(163, 21, 234);">SignUP</h2>
+
+                                </div>
+                            </div>
+                            <form action="" method="post">
+                                {%csrf_token%}
+                             
+                                <div class="row">
+                                <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"></div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text"
+                                                    style="border-style: radius; background-color: white;"><i
+                                                        class="" aria-hidden="true"
+                                                        style="color: rgb(60, 184, 233)"></i>
+                                                </div>
+                                            </div>
+                                            <input type="text" class="form-control" id="username" name="username" placeholder="Enter Name" Required>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"> </div>
+                               </div>
+                              <div class="row">
+                                <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"></div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text"
+                                                    style="border-style: radius; background-color: white;"><i
+                                                        class="fa fa-envelope-o" aria-hidden="true"
+                                                        style="color: rgb(60, 184, 233)"></i>
+                                                </div>
+                                            </div>
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" Required>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"> </div>
+                                </div>
+                               <div class="row">
+                                <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"></div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text"
+                                                    style="border-style: radius; background-color: white;"><i
+                                                        class="fa fa-unlock-alt" aria-hidden="true"
+                                                        style="color: rgb(60, 184, 233)"></i>
+                                                </div>
+                                            </div>
+                                            <input type="password" class="form-control" id="password"
+                                             name="password" placeholder="Enter password" Required>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3  "></div>
+                               </div>
+                               <div class="row">
+                                <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"></div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text"
+                                                    style="border-style: radius; background-color: white;"><i
+                                                        class="fa fa-unlock-alt" aria-hidden="true"
+                                                        style="color: rgb(60, 184, 233)"></i>
+                                                </div>
+                                            </div>
+                                            <input type="password" class="form-control" id="confpassword"
+                                                name="confpassword" placeholder="Re-enter password" Required>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3  "></div>
+                          
+                               </div>
+                            </form>
+                            
+                            <div class="row mt-1 mb-1">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                    <center>
+                                        <form method="post" action="{% url 'home' %}">
+                                            {% csrf_token %}
+                                             <button type="submit" class="btn btn-info"      style="border-radius: 20px;">Signup</button>
+                                        </form>
+                                    </center>
+                                </div>
+                            </div>
+                            </form>
+                           
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2" ></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
